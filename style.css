@@ -1,12 +1,160 @@
+:root {
+  --color1: #212121;
+  --color2: #323232;
+  --color3: #0D7377;
+  --color4: #14FFEC;
+  --color5: #EEEEEE;
+  --max-width: 1440px;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 10px;
+}
+body {
+  background-color: var(--color1);
+  color: var(--color5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  padding: 50px 6rem 0;
+  background-color: var(--color2);
+  width: 90%;
+  max-width: var(--max-width);
+  margin: auto;
+}
 h1 {
-  color: rgb(189, 54, 0);
-  text-align: center;
-  padding: 10px;
-  margin: 15px;
-  border: 3px dashed rgb(255, 153, 0);
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+p {
+  font-size: 2.3rem;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.title::after {
+  height: 3px;
+  width: 100%;
+  background: var(--color3);
+  background: linear-gradient(45deg, var(--color3) 0%, var(--color4) 100%);
+  -moz-background: linear-gradient(45deg, var(--color3) 0%, var(--color4) 100%);
+  content: "";
+  margin-top: -3px;
+}
+.section-title{
+  margin-bottom: 20px;
+}
+section + section {
+  margin-top: 25px;
+}
+
+#intro {
+  display: flex;
+}
+.avatar-container {
+ background-color: transparent;
+ position: relative;
+ z-index: 1;
+ width: 45%;
+ min-width: 29rem;
+ min-height: 29rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.avatar, 
+.avatar::before, 
+.avatar::after {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+}
+.avatar {
+  background-image: url("./images/Anubis.jpeg");
+  background-position: center;
+  background-size: contain;
+  position: relative;
+}
+.avatar::before,
+.avatar::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+.avatar::before {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--color3);
+}
+.avatar::after {
+  top: 1.5rem;
+  left: 1.5rem;
+  background-color: var(--color4);
+}
+
+.intro-container {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.intro-txt > h2 {
+  width: fit-content;
+  margin-top: 1rem;
+}
+.contact-information {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.contact-information li {
+  display: flex;
+  font-size: 3rem;
+  list-style: none;
+}
+.contact-information span {
+  margin-right: 15px;
+}
+.contact-information li + li {
+  margin-top: 10px;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-me-description {
+  max-width: 90%;
+  margin: auto;
+}
+.about-me-description p {
+  margin: 10px;
+}
+.about-me-description p::before, .about-me-description p::after {
+  font-weight: bold;
+  color: var(--color4);
+}
+.about-me-description p::before {
+  margin-left: -2rem;
+  content: '<';
+}
+.about-me-description p::after {
+  content: '/>';
 }
