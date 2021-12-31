@@ -41,6 +41,13 @@ h3 {
 p {
   font-size: 2.3rem;
 }
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.link {
+  color: var(--color4);
+}
 .title {
   display: flex;
   flex-direction: column;
@@ -58,8 +65,11 @@ p {
 .section-title{
   margin-bottom: 20px;
 }
-section + section {
+section {
   margin-top: 25px;
+}
+li {
+  font-size: 3rem;
 }
 
 #intro {
@@ -124,7 +134,6 @@ section + section {
 }
 .contact-information li {
   display: flex;
-  font-size: 3rem;
   list-style: none;
 }
 .contact-information span {
@@ -157,4 +166,34 @@ section + section {
 }
 .about-me-description p::after {
   content: '/>';
+}
+
+
+.skills-courses {
+  display: flex;
+}
+#skills, #courses {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 2.5rem 1.5rem;
+}
+
+#languages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#languages li {
+  list-style: none;
+  display: flex;
+}
+#languages li + li {
+  margin-top: 10px;
+}
+#languages li span {
+  margin-right: 10px;
 }
