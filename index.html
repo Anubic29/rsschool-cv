@@ -13,7 +13,11 @@
   <main>
     <section id="intro">
       <div class="avatar-container">
-        <div class="avatar"></div>
+        <div class="avatar">
+          <div>
+            <img src="./images/Anubis.jpeg" alt="Avatar">
+          </div>
+        </div>
       </div>
       <div class="intro-container">
         <div class="intro-txt">
@@ -76,6 +80,46 @@
         <li><span class="title">Russian:</span> native speaker</li>
         <li><span class="title">Ukrainian:</span> native speaker</li>
       </ul>
+    </section>
+    <section id="code">
+      <h2 class="title section-title">Code example</h2>
+      <p>Sorting - Two-way inserts (C#):</p>
+      <pre>
+        <code>
+public static Elem[] Search(Elem[] mas)
+{
+    int k = mas.Length;
+    Elem[] lmas = new Elem[2 * k];
+    lmas[k - 1] = mas[0];
+    int pos = k - 1;
+    for (int i = 1; i < k; i++)
+    {
+        int j = 0;
+        if (mas[i].key >= lmas[k - 1].key)
+        {
+            j++;
+            while (lmas[k - 1 + j] != null && mas[i].key > lmas[k - 1 + j].key)
+                j++;
+        }
+        else
+        {
+            j--;
+            pos--;
+            while (lmas[k - 1 + j] != null && mas[i].key < lmas[k - 1 + j].key)
+                j--;
+        }
+        Change(ref lmas, k - 1, j, mas[i]);
+    }
+    for (int i = 0; i < k; i++)
+        mas[i] = lmas[i + pos];
+    return mas;
+}
+        </code>
+      </pre>
+    </section>
+    <section id="experience">
+      <h2 class="title section-title">My experience</h2>
+      <p>Nothing yet…</p>
     </section>
   </main>
   <footer>
