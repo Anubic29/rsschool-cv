@@ -47,6 +47,10 @@ a {
 }
 .link {
   color: var(--color4);
+  transition: color .5s;
+}
+.link:hover {
+  color: var(--color3);
 }
 .title {
   display: flex;
@@ -242,6 +246,20 @@ header {
 }
 .nav-link {
   color: var(--color4);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.nav-link::after{
+  height: 2px;
+  width: 0%;
+  background: var(--color4);
+  content: "";
+  margin-top: -3px;
+  transition: width .5s;
+}
+.nav-link:hover:after{
+  width: 100%;
 }
 
 footer {
