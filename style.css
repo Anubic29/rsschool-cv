@@ -146,11 +146,14 @@ li {
   margin-top: 10px;
 }
 
-#about-me {
+#about-me, #skills, #courses, #languages, #code, #experience {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+#about-me {
+  justify-content: center;
 }
 .about-me-description {
   max-width: 90%;
@@ -177,19 +180,13 @@ li {
 }
 #skills, #courses {
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   padding: 5rem 2.5rem 1.5rem;
 }
 
-#languages {
-  display: flex;
-  flex-direction: column;
+#skills, #courses, #languages, #code, #experience {
   justify-content: flex-start;
-  align-items: center;
 }
+
 #languages li {
   list-style: none;
   display: flex;
@@ -200,13 +197,7 @@ li {
 #languages li span {
   margin-right: 10px;
 }
-
-#code {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
+ 
 #code pre {
   margin: 15px 0;
   width: 100%;
@@ -222,12 +213,6 @@ li {
   font-size: 1.7rem;
   background-color: var(--color1);
   width: fit-content;
-}
-#experience {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 header {
