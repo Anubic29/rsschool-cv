@@ -236,6 +236,7 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 5;
+  min-height: 45px;
 }
 .standart-navigation li{
   display: inline-block;
@@ -306,4 +307,68 @@ footer img {
 #btnToTop.show {
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 950px) {
+  header, main, footer {
+    width: 100%;
+    margin: 0;
+  }
+  #intro {
+    flex-direction: column;
+    align-items: center;
+  }
+  .avatar-container, .intro-container {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .intro-txt > h2 {
+    margin: 1rem auto 0;
+  }
+  .intro-txt {
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  header > nav {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  main {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .skills-courses {
+    flex-direction: column;
+    align-items: center;
+  }
+  #skills, #courses {
+    width: 100%;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer > * {
+    margin-top: 15px;
+  }
+  footer p {
+    order: -1;
+  }
+}
+@media (max-width: 610px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 440px) {
+  .contact-information li, #languages li {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-information li > span, #languages li > span {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 }
