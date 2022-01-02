@@ -4,10 +4,162 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>CV</title>
+  <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+    crossorigin="anonymous"
+  >
   <link rel="stylesheet" href="style.css">
+  <script src="func.js"></script>
 </head>
 <body>
-  <h1>My CV</h1>
+  <header>
+    <nav>
+      <ul class="standart-navigation">
+        <li><a class="nav-link" href="#intro">Intro</a></li>
+        <li><a class="nav-link" href="#about-me">About me</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#courses">Courses</a></li>
+        <li><a class="nav-link" href="#languages">Languages</a></li>
+        <li><a class="nav-link" href="#code">Code example</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+      </ul>
+    </nav>
+    <a id="btnMenu"><i class="fas fa-bars"></i></a>
+  </header>
+  <div id="popUpMenu">
+    <nav>
+      <ul>
+        <li><a class="nav-link" href="#intro">Intro</a></li>
+        <li><a class="nav-link" href="#about-me">About me</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#courses">Courses</a></li>
+        <li><a class="nav-link" href="#languages">Languages</a></li>
+        <li><a class="nav-link" href="#code">Code example</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <section id="intro">
+      <div class="avatar-container">
+        <div class="avatar">
+          <div>
+            <img src="./images/Avatar.jpeg" alt="Avatar">
+          </div>
+        </div>
+      </div>
+      <div class="intro-container">
+        <div class="intro-txt">
+          <h1>
+            Alexander Sitailo
+          </h1>
+          <h2>
+            Future Front-End Developer
+          </h2>
+        </div>
+        <ul class="contact-information">
+          <li>
+            <span class="title">GitHub:</span> Anubic29
+          </li>
+          <li>
+            <span class="title">Email:</span> asitailo2039@gmail.com
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="about-me">
+      <h2 class="title section-title">About me</h2>
+      <div class="about-me-description">
+        <p>
+          I’m 20 years old, I’m a second-year student of university at the Faculty of Programming. I’m interested in Web Development, so I want to try my hand at it.
+        </p>
+        <p>
+          I spend my free time learning Front End Development on free high quality self-study resources. When I found out about RSSchool I thought: "why not?". So I wanted to learn Front-End Development in RSSchool!
+        </p>
+        <p>
+          I hope my diligence and the courses will help me to obtain useful knowledge.
+        </p>
+      </div>
+    </section>
+    <div class="skills-courses">
+      <section id="skills">
+        <h2 class="title section-title">My skills</h2>
+        <ul>
+          <li>Html & CSS (Basic)</li>
+          <li>C++ (Basic)</li>
+          <li>Java (Basic)</li>
+          <li>C# (Basic)</li>
+          <li>Git & GitHub (Basic)</li>
+          <li>VS Code, IntelliJ IDEA</li>
+        </ul>
+      </section>
+      <section id="courses">
+        <h2 class="title section-title">Courses</h2>
+        <ul>
+          <li>RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)</li>
+          <li>JavaScript Basic on the <a class="link" href="https://ru.code-basics.com/" target="_blank">Code-Basics</a> (in progress)</li>
+          <li>Html & CSS Basic on the <a class="link" href="https://ru.code-basics.com/" target="_blank">Code-Basics</a> (completed)</li>
+        </ul>
+      </section>
+    </div>
+    <section id="languages">
+      <h2 class="title section-title">Languages</h2>
+      <ul>
+        <li><span class="title">English:</span> B1 (I have some speaking practice, but not with native speakers)</li>
+        <li><span class="title">Russian:</span> native speaker</li>
+        <li><span class="title">Ukrainian:</span> native speaker</li>
+      </ul>
+    </section>
+    <section id="code">
+      <h2 class="title section-title">Code example</h2>
+      <p>Sorting - Two-way inserts (C#):</p>
+      <pre>
+        <code>
+public static Elem[] Search(Elem[] mas)
+{
+    int k = mas.Length;
+    Elem[] lmas = new Elem[2 * k];
+    lmas[k - 1] = mas[0];
+    int pos = k - 1;
+    for (int i = 1; i &lt; k; i++)
+    {
+        int j = 0;
+        if (mas[i].key >= lmas[k - 1].key)
+        {
+            j++;
+            while (lmas[k - 1 + j] != null && mas[i].key > lmas[k - 1 + j].key)
+                j++;
+        }
+        else
+        {
+            j--;
+            pos--;
+            while (lmas[k - 1 + j] != null && mas[i].key &lt; lmas[k - 1 + j].key)
+                j--;
+        }
+        Change(ref lmas, k - 1, j, mas[i]);
+    }
+    for (int i = 0; i &lt; k; i++)
+        mas[i] = lmas[i + pos];
+    return mas;
+}
+        </code>
+      </pre>
+    </section>
+    <section id="experience">
+      <h2 class="title section-title">My experience</h2>
+      <p>Nothing yet…</p>
+    </section>
+  </main>
+  <a id="btnToTop" class=""><i class="fas fa-chevron-up"></i></a>
+  <footer>
+    <a class="foot-link" href="https://github.com/Anubic29" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <p>2022</p>
+    <a href="https://rs.school/js/">
+      <img src="https://rs.school/images/rs_school_js.svg" alt="rsschool">
+    </a>
+  </footer>
 </body>
 </html>
