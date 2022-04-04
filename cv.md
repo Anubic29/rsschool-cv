@@ -50,7 +50,11 @@ public static Elem[] Search(Elem[] mas)
 ```
 * * *
 ### Experience:
-*Nothing yet…*
++ [Portfolio](https://rolling-scopes-school.github.io/anubic29-JSFEPRESCHOOL/portfolio/)
++ [Custom video](https://rolling-scopes-school.github.io/anubic29-JSFEPRESCHOOL/custom-video/)
++ [Audio player](https://rolling-scopes-school.github.io/anubic29-JSFEPRESCHOOL/audio-player/)
++ [Movie app](https://rolling-scopes-school.github.io/anubic29-JSFEPRESCHOOL/movie-app/)
++ [Tetris](https://rolling-scopes-school.github.io/anubic29-JSFEPRESCHOOL/random-game/)
 * * *
 ### Courses:
 +	RS Schools Course «JavaScript/Front-end. Stage 0» **(in progress)**;

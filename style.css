@@ -215,6 +215,39 @@ li {
   width: fit-content;
 }
 
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.experience-item {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  font-size: 20px;
+  align-items: flex-end;
+  margin: 10px;
+  position: relative;
+}
+.experience-item img {
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+}
+.experience-item .link {
+  height: 300px;
+  width: 300px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
 header {
   position: fixed;
   padding: 10px 15px;
