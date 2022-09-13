@@ -26,7 +26,7 @@
         <li><a class="nav-link" href="#experience">Experience</a></li>
       </ul>
     </nav>
-    <a id="btnMenu"><i class="fas fa-bars"></i></a>
+    <button id="btnMenu"><i class="fas fa-bars"></i></button>
   </header>
   <div id="popUpMenu">
     <nav>
@@ -87,11 +87,11 @@
       <section id="skills">
         <h2 class="title section-title">My skills</h2>
         <ul>
-          <li>Html & CSS (Basic)</li>
+          <li>Html &amp CSS (Basic)</li>
           <li>C++ (Basic)</li>
           <li>Java (Basic)</li>
           <li>C# (Basic)</li>
-          <li>Git & GitHub (Basic)</li>
+          <li>Git &amp GitHub (Basic)</li>
           <li>VS Code, IntelliJ IDEA</li>
         </ul>
       </section>
@@ -100,7 +100,7 @@
         <ul>
           <li>RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)</li>
           <li>JavaScript Basic on the <a class="link" href="https://ru.code-basics.com/" target="_blank">Code-Basics</a> (in progress)</li>
-          <li>Html & CSS Basic on the <a class="link" href="https://ru.code-basics.com/" target="_blank">Code-Basics</a> (completed)</li>
+          <li>Html &amp CSS Basic on the <a class="link" href="https://ru.code-basics.com/" target="_blank">Code-Basics</a> (completed)</li>
         </ul>
       </section>
     </div>
@@ -126,17 +126,17 @@ public static Elem[] Search(Elem[] mas)
     for (int i = 1; i &lt; k; i++)
     {
         int j = 0;
-        if (mas[i].key >= lmas[k - 1].key)
+        if (mas[i].key &gt= lmas[k - 1].key)
         {
             j++;
-            while (lmas[k - 1 + j] != null && mas[i].key > lmas[k - 1 + j].key)
+            while (lmas[k - 1 + j] != null &amp&amp mas[i].key &gt lmas[k - 1 + j].key)
                 j++;
         }
         else
         {
             j--;
             pos--;
-            while (lmas[k - 1 + j] != null && mas[i].key &lt; lmas[k - 1 + j].key)
+            while (lmas[k - 1 + j] != null &amp&amp mas[i].key &lt; lmas[k - 1 + j].key)
                 j--;
         }
         Change(ref lmas, k - 1, j, mas[i]);
@@ -174,7 +174,7 @@ public static Elem[] Search(Elem[] mas)
       </div>
     </section>
   </main>
-  <a id="btnToTop" class=""><i class="fas fa-chevron-up"></i></a>
+  <button id="btnToTop"><i class="fas fa-chevron-up"></i></button>
   <footer>
     <a class="foot-link" href="https://github.com/Anubic29" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     <p>2022</p>
